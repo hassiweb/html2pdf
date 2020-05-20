@@ -36,7 +36,8 @@ html2pdf:
         - set +e # disable exit on error
         - files="test/*.html"
         - for filepath in $files; do
-        -   /usr/local/bin/entrypoint --url file://$filepath --pdf $filepath.pdf
+        -   echo Converting $filepath
+        -   /usr/local/bin/entrypoint --url file://$PWD/$filepath --pdf $filepath.pdf
         - done
     artifacts:
         paths:
