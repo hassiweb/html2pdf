@@ -14,4 +14,4 @@ RUN wget https://noto-website.storage.googleapis.com/pkgs/Noto-unhinted.zip \
  && fc-cache -fv    
 
 # ENTRYPOINT ["/bin/bash", "/usr/local/bin/entrypoint.bash"]
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh"]
