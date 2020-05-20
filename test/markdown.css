@@ -1,0 +1,46 @@
+@charset "UTF-8";
+  
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.2em;
+  color: #4283f5;
+}
+  
+p, strong { 
+  font-size: 1.0em;
+  color: #303030;
+}
+
+.task-list-item-checkbox {
+  font-size: smaller;
+  color: #303030;
+}
+
+li {
+  color: #303030;
+}
+
+h1 {
+  font-size: 1.8em;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: #4283f5;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+pre code {
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: #8bdf4c;
+  display: block;
+  padding: 15px;
+  font-size: 1em;
+}
+	
+@media print {
+  body {
+    font-family: 'Noto Sans Japanese',sans-serif;       
+  }
+}
