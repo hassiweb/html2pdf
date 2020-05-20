@@ -27,7 +27,9 @@ docker-image-build:
 
 html2pdf:
     stage: convert
-    image: registry.gitlab.com/hassiweb-programming/html2pdf/chrome-headless-render-pdf-ja:$IMAGE_VERSION
+    image: 
+        name: registry.gitlab.com/hassiweb-programming/html2pdf/chrome-headless-render-pdf-ja:$IMAGE_VERSION
+        entrypoint: [""]
     variables:
         PANDOC_OPTIONS: "-s --pdf-engine=lualatex -V documentclass=ltjsarticle -V classoption=pandoc --lua-filter /opt/lualatex/filter/gitlab-math.lua"
     script:

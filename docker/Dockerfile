@@ -12,6 +12,3 @@ RUN wget https://noto-website.storage.googleapis.com/pkgs/Noto-unhinted.zip \
  && mv -fv ./NotoSansJapanese /usr/share/fonts/opentype/NotoSansJapanese \
  && rm -rfv Noto-unhinted.zip \
  && fc-cache -fv    
-
-# ENTRYPOINT ["/bin/bash", "/usr/local/bin/entrypoint.bash"]
-ENTRYPOINT ["/bin/sh"]
