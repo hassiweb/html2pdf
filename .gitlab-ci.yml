@@ -30,14 +30,16 @@ html2pdf:
     image: 
         name: registry.gitlab.com/hassiweb-programming/html2pdf/chrome-headless-render-pdf-ja:$IMAGE_VERSION
         entrypoint: [""]
+    variables:
+        DIR: test
     script:
         - set +e # disable exit on error
-        - files="test/*.html"
+        - files="$DIR/*.html"
         - for filepath in $files; do
         -   echo Converting $filepath
         -   /usr/local/bin/entrypoint --url file://$PWD/$filepath --pdf $filepath.pdf
         - done
     artifacts:
         paths:
-            - "test/*.pdf"
+            - "$DIR/*.pdf"
 
