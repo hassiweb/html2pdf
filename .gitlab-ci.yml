@@ -30,8 +30,6 @@ html2pdf:
     image: 
         name: registry.gitlab.com/hassiweb-programming/html2pdf/chrome-headless-render-pdf-ja:$IMAGE_VERSION
         entrypoint: [""]
-    variables:
-        PANDOC_OPTIONS: "-s --pdf-engine=lualatex -V documentclass=ltjsarticle -V classoption=pandoc --lua-filter /opt/lualatex/filter/gitlab-math.lua"
     script:
         - set +e # disable exit on error
         - files="test/*.html"
